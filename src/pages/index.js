@@ -1,18 +1,12 @@
-import Link from "next/link";
+import "./../styles/index.module.scss";
 
 function Home() {
   return (
-    <ul>
-      <li>
-        <Link href="/">Home</Link>
-      </li>
-      <li>
-        <Link href="/about">About Us</Link>
-      </li>
-      <li>
-        <Link href="/contact">Contact us</Link>
-      </li>
-    </ul>
+    <>
+      <div className="container mx-auto px-4 text-center">
+        <h1 className="text-3xl font-bold underline title">Hello world!</h1>
+      </div>
+    </>
   );
 }
 
