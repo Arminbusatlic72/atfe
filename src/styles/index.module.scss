@@ -1,8 +1,14 @@
-
+@import 'variables';
 @import 'mixins';
-$primary-color: blue;
+@import 'footer';
+@import 'heroVideo';
+
+ .body-text {
+    font-family: $body-font-family;
+ }
 .title {
     color: $primary-color;
+    
 }
 
 @include mobile() {

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import Logo from "./Logo";
 const samplePageLinks = [
   { text: "Teaching Jobs", url: "/teaching-jobs", id: 1 },
   { text: "TA Jobs", url: "/ta-jobs", id: 2 },
@@ -10,23 +11,42 @@ const samplePageLinks = [
 ];
 
 function Navbar() {
+  /**
+   * This Hook can be used for detecting clicks outside the Opened Menu
+   */
+  function clickOutside(ref, onClickOutside) {
+    useEffect(() => {
+      /**
+       * Invoke Function onClick outside of element
+       */
+      function handleClickOutside(event) {
+        if (ref.current && !ref.current.contains(event.target)) {
+          onClickOutside();
+        }
+      }
+      // Bind
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        // dispose
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [ref, onClickOutside]);
+  }
+
   const [open, setOpen] = useState(false);
+  const wrapperRef = useRef();
+  clickOutside(wrapperRef, () => {
+    setOpen(false);
+  });
+
   return (
     <>
       <nav className="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
           <Link href="https://flowbite.com/" className="flex items-center">
-            {/* <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo"> */}
-            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-              Flowbite
-            </span>
+            <Logo src="/act_logo.svg" alt="Act Logo" width={200} height={100} />
           </Link>
-          <button
-            type="button"
-            className="text-white bg-red-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            Get started
-          </button>
+          <span>Send CV</span>
         </div>
 
         <div className="container flex flex-wrap mx-auto items-center justify-start md:justify-center">
@@ -39,6 +59,7 @@ function Navbar() {
               className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               aria-controls="navbar-sticky"
               aria-expanded="false"
+              ref={wrapperRef}
             >
               <span className="sr-only">Open main menu</span>
               <svg
@@ -70,11 +91,10 @@ function Navbar() {
                 <li key={i} className="flex item-center content-center">
                   <Link
                     href={link.url}
-                    className="text-xl block py-2 px-5 text-black bg-black-700 rounded :bg-transparent md:text-black-700 md:dark:text-black"
+                    className="text-xl block py-2 px-5 text-black bg-black-700 rounded :bg-transparent md:text-black-700 md:dark:text-black body-text"
                   >
                     {link.text}
                   </Link>
-                  {i !== samplePageLinks.length - 1 && <> · </>}
                 </li>
               ))}
             </ul>
