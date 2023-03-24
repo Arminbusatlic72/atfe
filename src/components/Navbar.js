@@ -43,7 +43,7 @@ function Navbar() {
     <>
       <nav className="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
-          <Link href="https://flowbite.com/" className="flex items-center">
+          <Link href="/" className="flex items-center">
             <Logo src="/act_logo.svg" alt="Act Logo" width={200} height={100} />
           </Link>
           <span>Send CV</span>
