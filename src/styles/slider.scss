@@ -1,0 +1,13 @@
+@import 'variables';
+.card {
+    text-align: left;
+}
+.card__title {
+    font-family: $heading-font-family;
+    font-size: 26px;
+}
+.card__title-holder {
+    display: inline-block;
+    border-bottom: 1px solid #000;
+    word-wrap: break-word;
+}
