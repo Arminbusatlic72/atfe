@@ -1,23 +1,25 @@
-function Button() {
-  return (
-    <footer className="main-footer">
-      <div className="mx-auto w-full container p-4 sm:p-6">
-        <div className="md:flex md:justify-between">
-          <div className="mb-6 md:mb-0">
-            <a href="https://flowbite.com/" className="flex items-center">
-              <img
-                src="https://flowbite.com/docs/images/logo.svg"
-                className="h-8 mr-3"
-                alt="FlowBite Logo"
-              />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                Flowbite
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
+import Link from "next/link";
+
+function Button({ label, color = "primary", type = "internal", url }) {
+  const colorVariants = {
+    primary: "btn-primary",
+    secondary: "btn-secondary",
+    tertiary: "btn-tertiary",
+  };
+
+  if (type === "external") {
+    return (
+      <a className={colorVariants[color]} href={url}>
+        {label}
+      </a>
+    );
+  } else {
+    return (
+      <Link className={colorVariants[color]} href={url}>
+        {label}
+      </Link>
+    );
+  }
 }
+
 export default Button;
