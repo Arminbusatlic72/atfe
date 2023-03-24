@@ -7,7 +7,7 @@ const samplePageLinks = [
   { text: "Support staff", url: "/support-staff", id: 3 },
   { text: "Schools", url: "/schools", id: 4 },
   { text: "About Us", url: "/about", id: 5 },
-  { text: "Contact Us", url: "/contact", id: 3 }
+  { text: "Contact Us", url: "/contact", id: 3 },
 ];
 
 function Navbar() {
@@ -41,7 +41,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+      <nav className="bg-white px-2 sm:px-4 py-2.5 w-full left-0 border-b border-gray">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
           <Link href="https://flowbite.com/" className="flex items-center">
             <Logo src="/act_logo.svg" alt="Act Logo" width={200} height={100} />
