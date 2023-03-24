@@ -1,4 +1,9 @@
+import ReferSection from "@/components/ReferSection";
 function About() {
-  return <h1>Hello from about page</h1>;
+  return (
+    <div>
+      <ReferSection />
+    </div>
+  );
 }
 export default About;
