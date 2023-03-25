@@ -4,12 +4,14 @@ import Button from "./Button";
 const Slider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesToShow, setSlidesToShow] = useState(1);
+  const [visibleSlides, setVisibleSlides] = useState([]);
 
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
+
   const goToNext = () => {
     const isLastSlide = currentIndex === slides.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
@@ -24,21 +26,28 @@ const Slider = ({ slides }) => {
         setSlidesToShow(newSlidesToShow);
       }
     };
+
     // Add event listener for window resize
     window.addEventListener("resize", handleResize);
+
     // Call handleResize once to set initial number of slides to show
     handleResize();
+
     // Remove event listener on cleanup
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Calculate the index range of slides to display
-  const start = currentIndex;
-  const end =
-    start + slidesToShow - 1 >= slides.length
-      ? slides.length - 1
-      : start + slidesToShow - 1;
-  const visibleSlides = slides.slice(start, end + 1);
+  useEffect(() => {
+    const endIndex = currentIndex + slidesToShow;
+    if (endIndex > slides.length) {
+      setVisibleSlides([
+        ...slides.slice(currentIndex),
+        ...slides.slice(0, endIndex % slides.length)
+      ]);
+    } else {
+      setVisibleSlides(slides.slice(currentIndex, endIndex));
+    }
+  }, [currentIndex, slides, slidesToShow]);
 
   return (
     <div className="slider">

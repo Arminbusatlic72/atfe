@@ -37,7 +37,7 @@ function RecruiterSection() {
             <Card key={recruiter.name} recruiter={recruiter} />
           ))}
         </div>
-        <div className="container text-center mb-5">
+        <div className="container text-center pb-5">
           <Button
             label={"Accelerate your journey"}
             url={"/"}

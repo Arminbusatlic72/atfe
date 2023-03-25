@@ -46,7 +46,7 @@ function SliderSection() {
   ];
   const sliderContainerStyles = {};
   return (
-    <section className="container mx-auto px-4 pt-8 text-center min-h-screen">
+    <section className="container mx-auto px-4 pt-8 text-center">
       <h2 className="text-black text-6xl slider-section__heading">
         Latest Jobs
       </h2>

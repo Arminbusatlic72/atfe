@@ -1,13 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Logo from "./Logo";
+import Image from "next/image";
 const samplePageLinks = [
   { text: "Teaching Jobs", url: "/teaching-jobs", id: 1 },
   { text: "TA Jobs", url: "/ta-jobs", id: 2 },
   { text: "Support staff", url: "/support-staff", id: 3 },
   { text: "Schools", url: "/schools", id: 4 },
   { text: "About Us", url: "/about", id: 5 },
-  { text: "Contact Us", url: "/contact", id: 3 },
+  { text: "Contact Us", url: "/contact", id: 3 }
 ];
 
 function Navbar() {
@@ -46,7 +47,10 @@ function Navbar() {
           <Link href="/" className="flex items-center">
             <Logo src="/act_logo.svg" alt="Act Logo" width={200} height={100} />
           </Link>
-          <span>Send CV</span>
+          <div>
+            <Image src={"/clip-board-circle.svg"} width={70} height={70} />
+            <span>Send CV</span>
+          </div>
         </div>
 
         <div className="container flex flex-wrap mx-auto items-center justify-start md:justify-center">
