@@ -1,6 +1,12 @@
 import Link from "next/link";
 
-function Button({ label, color = "primary", type = "internal", url }) {
+function Button({
+  label,
+  color = "primary",
+  type = "internal",
+  url,
+  customClass,
+}) {
   const colorVariants = {
     primary: "btn-primary",
     secondary: "btn-secondary",
@@ -9,13 +15,13 @@ function Button({ label, color = "primary", type = "internal", url }) {
 
   if (type === "external") {
     return (
-      <a className={colorVariants[color]} href={url}>
+      <a className={`${colorVariants[color]} ${customClass}`} href={url}>
         {label}
       </a>
     );
   } else {
     return (
-      <Link className={colorVariants[color]} href={url}>
+      <Link className={`${colorVariants[color]} ${customClass}`} href={url}>
         {label}
       </Link>
     );
