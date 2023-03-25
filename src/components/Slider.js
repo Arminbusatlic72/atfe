@@ -1,39 +1,10 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Button from "./Button";
 const Slider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesToShow, setSlidesToShow] = useState(1);
-  const sliderStyles = {
-    height: "100%",
-    width: "100%",
-    display: "flex",
-    position: "relative",
-    border: "1px solid black"
-  };
-  const slideStyles = {
-    height: "100%",
-    width: "33%"
-  };
-  const leftArrowStyles = {
-    position: "absolute",
-    top: "50%",
-    transform: "translate(0, -50%)",
-    left: "32px",
-    fontSize: "45px",
-    zIndex: "1",
-    cursor: "pointer",
-    color: "black"
-  };
-  const rightArrowStyles = {
-    position: "absolute",
-    top: "50%",
-    transform: "translate(0, -50%)",
-    right: "32px",
-    fontSize: "45px",
-    zIndex: "1",
-    cursor: "pointer",
-    color: "black"
-  };
+
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
@@ -126,11 +97,8 @@ const Slider = ({ slides }) => {
               </div>
             </li>
           </ul>
-          <a
-            href="#"
-            className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 card__button"
-          >
-            Read more
+          <a href="#" className="btn-primary card__button">
+            View Job
           </a>
         </div>
       ))}

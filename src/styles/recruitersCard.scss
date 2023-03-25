@@ -1,8 +1,24 @@
+@import "mixins";
+@import "variables";
 .recruiter-card {
     position: relative;
+    width: 100%;
+    @include desktop() {
+        width: 30%;
+     }
+margin-bottom: 30px;
 }
-.card__image {
+.recruiter-card__image {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -25px;
+    left: 10px;
 }
+// .recruiter-card__testimonial {
+
+// }
+// .recruiter-card__name {
+// color:$color-red;
+// }
+// .recruiter-card__position {
+// color:$primary-color;
+// }

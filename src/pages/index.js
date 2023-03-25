@@ -3,6 +3,7 @@ import HeroVideo from "../components/HeroVideo";
 import Head from "next/head";
 import SliderSection from "@/components/sliderSection";
 import RecruiterSection from "@/components/RecruitersSection";
+import ReferSection from "@/components/ReferSection";
 
 function Home() {
   return (
@@ -19,6 +20,7 @@ function Home() {
       <HeroVideo />
       <SliderSection />
       <RecruiterSection />
+      <ReferSection />
     </>
   );
 }
