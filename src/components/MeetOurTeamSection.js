@@ -56,7 +56,7 @@ function MeetOurTeamSection() {
     }
   ];
   return (
-    <section className="text-center bg-red-100 py-8">
+    <section className="text-center bg-red-100 py-8 meet-our-team-section">
       <h2 className="text-white text-6xl">Meet Our Team</h2>
       <p className="recruiter-section__subheading">
         Whilst our name is brand new, our team of education specialists boast 30

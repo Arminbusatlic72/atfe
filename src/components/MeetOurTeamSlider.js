@@ -61,7 +61,7 @@ const MeetOurTeamSlider = ({ slides }) => {
       {visibleSlides.map((slide) => (
         <div
           key={slide.id}
-          className="p-6 bg-red-100 mx-5 text-center meet-our-team-slider-card relative"
+          className="p-6 bg-red-100 text-center meet-our-team-slider-card relative"
         >
           <Image
             src={slide.img.startsWith("/") ? slide.img : `/${slide.img}`}

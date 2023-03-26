@@ -1,0 +1,25 @@
+@import "mixins";
+.meet-our-team-section {
+    position: relative;
+    z-index: 1;
+    @include desktop() {
+        &::before {
+            content: url(/top-border-pink.svg);
+            position: absolute;
+            top: -64px;
+            right: 0;
+            z-index: -1;
+          }
+          &::after {
+              content: url(/bottom-border-pink.svg);
+              position: absolute;
+              bottom: -75px;
+              left: 0;
+              z-index: -1;
+            }
+
+    }
+    
+    
+  }
+  
