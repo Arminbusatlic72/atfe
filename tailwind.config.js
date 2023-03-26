@@ -24,11 +24,16 @@ module.exports = {
         200: "#b80357",
       },
       white: "#FFFFFF",
-      gray: "#ebebeb",
+      gray: "#e9e9e9",
+      black: "#000000",
     },
     fontFamily: {
       sans: ["Roboto", "sans-serif"],
       headings: ["Sora", "sans-serif"],
+    },
+    aspectRatio: {
+      "70/30": "70 / 30",
+      square: "1 / 1",
     },
   },
   plugins: [],

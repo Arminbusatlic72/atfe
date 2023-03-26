@@ -1,0 +1,19 @@
+.hero-section {
+  &__highlighted {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("/yellow-divider.svg");
+      background-size: contain;
+      width: 102%;
+      height: 15px;
+      background-repeat: no-repeat;
+      bottom: -5px;
+      z-index: -1;
+    }
+  }
+}

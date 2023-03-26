@@ -11,7 +11,8 @@ function TeachingJobs() {
     <div>
       <HeroSection
         backgroundImage="/ATJobsHero.jpg"
-        headingText="Welcome to my website"
+        headingTextHighlighted="Teaching"
+        headingText="jobs"
       />
       <AboutTeachingJobsSection />
       <TeachingJobsSection />
