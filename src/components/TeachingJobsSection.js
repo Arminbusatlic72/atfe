@@ -17,7 +17,7 @@ function TeachingJobsSection() {
             <select
               id="input1"
               name="input1"
-              className="w-full block appearance-none bg-white border border-gray-200 rounded-3xl p-2 pr-8 hover:bg-gray-50 focus:bg-gray-50 focus:outline-none focus:border-gray-500 focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 teaching-jobs-section__input"
+              className="w-full block appearance-none bg-white border border-gray drop-shadow-lg rounded-xl p-2 pr-8 hover:bg-gray-50 focus:bg-gray-50 focus:outline-none focus:border-gray-500 focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 teaching-jobs-section__input"
               placeholder="Teaching assistant"
             >
               <option value="option1">Teaching assistant</option>
@@ -32,7 +32,7 @@ function TeachingJobsSection() {
             <select
               id="input2"
               name="input2"
-              className="w-full block appearance-none bg-white border border-gray-100 rounded-3xl p-2 pr-8 hover:bg-gray-50 focus:bg-gray-50 focus:outline-none focus:border-gray-500 focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 teaching-jobs-section__input"
+              className="w-full block appearance-none bg-white border border-gray drop-shadow-lg rounded-xl p-2 pr-8 hover:bg-gray-50 focus:bg-gray-50 focus:outline-none focus:border-gray-500 focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 teaching-jobs-section__input"
               placeholder="Primary schools"
             >
               <option value="option1">Primary schools</option>

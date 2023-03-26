@@ -1,0 +1,25 @@
+@import 'variables';
+.meet-our-team-slider-card { 
+    width: 100%;
+    padding: 30px;
+   
+    @include desktop() {
+      width: 30%;
+    }
+  }
+  .meet-our-team-slider-card__link {
+    position: absolute;
+    bottom: 230px;
+    right: 50px;
+    @include desktop() {
+        bottom: 200px;
+        right: 15px;
+      }
+  }
+  .meet-our-team-slider-card__title-holder {
+    margin-bottom: 20px;
+   padding-bottom: 30px;
+   margin-left: 20px;
+   margin-right: 20px;
+    border-bottom: 1px solid $color-yellow;
+  }

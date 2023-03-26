@@ -1,3 +1,4 @@
+import Button from "./Button";
 function ContactForm() {
   return (
     <form className="flex flex-col md:flex-row">
@@ -9,7 +10,7 @@ function ContactForm() {
           id="name"
           type="text"
           name="name"
-          className="border border-gray-400 px-3 py-2 mb-4 w-full"
+          className="border border-gray px-3 py-5 mb-4 w-full rounded-xl drop-shadow-lg"
         />
         <label htmlFor="telephone" className="block font-medium mb-2">
           Telephone
@@ -18,7 +19,7 @@ function ContactForm() {
           id="telephone"
           type="tel"
           name="telephone"
-          className="border border-gray-400 px-3 py-2 mb-4 w-full"
+          className="border border-gray px-3 py-5 mb-4 w-full rounded-xl drop-shadow-lg"
         />
         <label htmlFor="email" className="block font-medium mb-2">
           Email
@@ -27,7 +28,7 @@ function ContactForm() {
           id="email"
           type="email"
           name="email"
-          className="border border-gray-400 px-3 py-2 mb-4 w-full"
+          className="border border-gray px-3 py-5 mb-4 w-full rounded-xl drop-shadow-lg"
         />
       </div>
       <div className="md:w-1/2 md:pl-6">
@@ -37,14 +38,14 @@ function ContactForm() {
         <textarea
           id="comment"
           name="comment"
-          className="border border-gray-400 px-3 py-2 mb-4 w-full h-40"
+          className="border border-gray px-3 py-5 mb-4 w-full rounded-xl h-40 drop-shadow-lg"
         ></textarea>
-        <button
-          type="submit"
-          className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded"
-        >
-          Submit
-        </button>
+        <Button
+          label="Submit"
+          type="input"
+          inputType="submit"
+          color="secondary"
+        />
       </div>
     </form>
   );

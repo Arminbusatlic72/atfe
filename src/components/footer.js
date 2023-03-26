@@ -1,5 +1,5 @@
 import Logo from "./Logo";
-// import SocialMediaMenu from "./Social-media-menu-footer";
+import SocialMediaMenu from "./Social-media-menu-footer";
 
 function Footer() {
   return (
@@ -16,7 +16,7 @@ function Footer() {
               />
             </a>
           </div>
-          <div className="mb-6 md:mb-0 flex justify-center content-center">
+          <div className="mb-6 md:mb-0 flex justify-center items-center">
             <span className="text-sm text-white sm:text-center dark:text-gray-400">
               © 2023{" "}
               <a href="https://flowbite.com/" className="hover:underline">
@@ -27,9 +27,8 @@ function Footer() {
           </div>
           <div className="mb-6 md:mb-0">
             <h4 className="text-white">Follow us on social media</h4>
-            <a href="/" className="flex items-center">
-              {/* <SocialMediaMenu /> */}
-            </a>
+
+            <SocialMediaMenu />
           </div>
         </div>
       </div>

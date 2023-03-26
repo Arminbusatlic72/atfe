@@ -37,8 +37,10 @@ const HeroVideo = ({ videoSrc, imageSrc }) => {
       </div>
       <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
       <div className="video-content space-y-2">
-        <h1 className="font-light text-6xl heading text-white font-extrabold">
-          Inspire. Educate. Accelerate
+        <h1 className="font-light text-6xl heading text-white font-extrabold"></h1>
+        <h1 className="text-white text-5xl md:text-7xl font-bold font-headings">
+          Inspire. Educate.
+          <span className="hero-section__highlighted"> Accelerate</span>{" "}
         </h1>
       </div>
     </section>

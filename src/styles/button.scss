@@ -1,11 +1,11 @@
 @layer components {
   .btn-primary {
-    @apply py-4 px-8 bg-red-100 text-white rounded-full hover:bg-red-200 focus:outline-none text-lg font-headings inline-block;
+    @apply py-2 px-12 bg-red-100 text-white rounded-full hover:bg-red-200 focus:outline-none text-lg font-headings inline-block;
   }
   .btn-secondary {
-    @apply py-4 px-8 bg-light-blue-100 text-white rounded-full hover:bg-light-blue-200 focus:outline-none text-lg font-headings inline-block;
+    @apply py-2 px-12 bg-light-blue-100 text-white rounded-full hover:bg-light-blue-200 focus:outline-none text-lg font-headings inline-block;
   }
   .btn-tertiary {
-    @apply py-4 px-8 bg-yellow-100 text-red-100 rounded-full hover:bg-yellow-200 focus:outline-none text-lg font-headings inline-block;
+    @apply py-2 px-12 bg-yellow-100 text-red-100 rounded-full hover:bg-yellow-200 focus:outline-none text-lg font-headings inline-block;
   }
 }

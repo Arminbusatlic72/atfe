@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Button from "./Button";
-const Slider = ({ slides }) => {
+
+const MeetOurTeamSlider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesToShow, setSlidesToShow] = useState(1);
   const [visibleSlides, setVisibleSlides] = useState([]);
@@ -61,61 +61,40 @@ const Slider = ({ slides }) => {
       {visibleSlides.map((slide) => (
         <div
           key={slide.id}
-          className="p-6 bg-gray rounded-3xl shadow mx-5 card"
+          className="p-6 bg-red-100 mx-5 text-center meet-our-team-slider-card relative"
         >
-          <a href="#">
-            <div className="card__title-holder">
-              <h5 className="card__title">{slide.title}</h5>
-            </div>
-          </a>
-          <ul className="card__list">
-            <li className="card-list__item">
-              <Image
-                src="/icon-location.svg"
-                width={40}
-                height={40}
-                className="card__icon"
-              />
-              <div>
-                <span className="card__span">Location:</span>
-                {slide.location}
-              </div>
-            </li>
-            <li className="card-list__item">
-              <Image
-                src="/icon-piggy.svg"
-                width={40}
-                height={40}
-                className="card__icon"
-              />
-              <div>
-                <span className="card__span">Salary:</span>
-                {slide.salary}
-              </div>
-            </li>
-            <li className="card-list__item">
-              <Image
-                src="/icon-house.svg"
-                width={40}
-                height={40}
-                className="card__icon"
-              />
-              <div>
-                <span className="card__span">Setting:</span>
-                {slide.setting}
-              </div>
-            </li>
-          </ul>
-          <Button
-            url={"/"}
-            label={"View Job"}
-            color={"primary"}
-            customClass={"card__button"}
+          <Image
+            src={slide.img.startsWith("/") ? slide.img : `/${slide.img}`}
+            width={500}
+            height={500}
+            className="rounded-full mb-5"
           />
+
+          <a
+            href="{slide.linkedin}"
+            className="meet-our-team-slider-card__link"
+          >
+            <Image src="/ATmeetOurTeamLinkedin.png" width={100} height={100} />
+          </a>
+
+          <div className="text-center meet-our-team-slider-card__title-holder">
+            <h5 className="text-orange headings text-bold text-3xl meet-our-team-slider-card__name">
+              {slide.name}
+            </h5>
+            <h7 className="text-white text-bold headings text-2xl meet-our-team-slider-card__position">
+              {slide.position}
+            </h7>
+          </div>
+          <a
+            href="`mailto:${slide.email}`"
+            className="text-white headings text-bold text-2xl"
+          >
+            {slide.email}
+          </a>
         </div>
       ))}
     </div>
   );
 };
 
-export default Slider;
+export default MeetOurTeamSlider;

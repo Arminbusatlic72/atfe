@@ -1,5 +1,9 @@
 @import 'slider';
 @import "variables";
+.slider-section {
+    padding-top: 15px;
+    padding-bottom: 90px;
+}
 .slider-section__heading {
     font-family: $heading-font-family;
     margin-bottom: 30px;

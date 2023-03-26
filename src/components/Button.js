@@ -5,12 +5,13 @@ function Button({
   color = "primary",
   type = "internal",
   url,
-  customClass,
+  inputType,
+  customClass
 }) {
   const colorVariants = {
     primary: "btn-primary",
     secondary: "btn-secondary",
-    tertiary: "btn-tertiary",
+    tertiary: "btn-tertiary"
   };
 
   if (type === "external") {
@@ -19,11 +20,19 @@ function Button({
         {label}
       </a>
     );
-  } else {
+  } else if (type === "internal") {
     return (
       <Link className={`${colorVariants[color]} ${customClass}`} href={url}>
         {label}
       </Link>
+    );
+  } else if (type === "input") {
+    return (
+      <input
+        type={inputType}
+        className={`${colorVariants[color]} ${customClass}`}
+        value={label}
+      />
     );
   }
 }

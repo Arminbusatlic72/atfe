@@ -1,4 +1,5 @@
 import Slider from "./Slider";
+import Button from "./Button";
 function SliderSection() {
   const slides = [
     {
@@ -44,14 +45,15 @@ function SliderSection() {
       id: 6
     }
   ];
-  const sliderContainerStyles = {};
+
   return (
-    <section className="container mx-auto px-4 pt-8 text-center">
+    <section className="container mx-auto px-4 text-center slider-section">
       <h2 className="text-black text-6xl slider-section__heading">
         Latest Jobs
       </h2>
       <div className="slider-container">
         <Slider slides={slides} />
+        <Button url={"/"} label={"View more"} color={"secondary"} />
       </div>
     </section>
   );
