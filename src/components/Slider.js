@@ -42,7 +42,7 @@ const Slider = ({ slides }) => {
     if (endIndex > slides.length) {
       setVisibleSlides([
         ...slides.slice(currentIndex),
-        ...slides.slice(0, endIndex % slides.length)
+        ...slides.slice(0, endIndex % slides.length),
       ]);
     } else {
       setVisibleSlides(slides.slice(currentIndex, endIndex));
@@ -61,7 +61,7 @@ const Slider = ({ slides }) => {
       {visibleSlides.map((slide) => (
         <div
           key={slide.id}
-          className="max-w-sm p-6 bg-white border border-gray-300 rounded-3xl shadow dark:bg-gray-900 dark:border-gray-900 mx-5 card"
+          className="max-w-sm p-6 bg-gray rounded-3xl shadow mx-5 card"
         >
           <a href="#">
             <div className="card__title-holder">

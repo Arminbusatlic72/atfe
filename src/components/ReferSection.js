@@ -19,7 +19,7 @@ function ReferSection() {
             <p className="text-light-blue-100 font-bold mb-5">Lorem ipsum</p>
             <Button label={"Start Refering"} url={"/"} color={"tertiary"} />
           </div>
-          <div class="w-full md:w-1/2">
+          <div className="w-full md:w-1/2">
             <Image src="/ATrefer-friend.png" width={500} height={500} />
           </div>
         </div>
