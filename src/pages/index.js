@@ -1,9 +1,9 @@
 import "./../styles/index.module.scss";
 import HeroVideo from "../components/HeroVideo";
 import Head from "next/head";
-import SliderSection from "@/components/sliderSection";
-import RecruiterSection from "@/components/RecruitersSection";
-import ReferSection from "@/components/ReferSection";
+import SliderSection from "../components/SliderSection";
+import RecruiterSection from "../components/RecruitersSection";
+import ReferSection from "../components/ReferSection";
 
 function Home() {
   return (
