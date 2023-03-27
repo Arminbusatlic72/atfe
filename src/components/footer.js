@@ -1,5 +1,5 @@
 import Logo from "./Logo";
-import SocialMediaMenu from "./Social-media-menu-footer";
+import SocialMediaMenu from "./SocialMediaMenuFooter";
 
 function Footer() {
   return (
