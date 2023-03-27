@@ -1,9 +1,8 @@
 import React from "react";
-import Image from "next/image";
 
 function Hero({ backgroundImage, headingTextHighlighted, headingText }) {
   return (
-    <div class="relative">
+    <div className="relative">
       <img
         className="md:aspect-[70/30] aspect-square object-cover"
         src={backgroundImage}

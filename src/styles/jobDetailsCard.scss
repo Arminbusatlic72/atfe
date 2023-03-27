@@ -1,0 +1,20 @@
+@import 'mixins';
+.job-details-card {
+    @include desktop() {
+        position: relative;
+        top: -100px;
+        right: 15px;
+    }
+
+}
+.job-details-card-list__item {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 5px;
+    border-bottom: 1px solid black;
+}
+.job-details-card-list__item:last-child {
+    border: none;
+}

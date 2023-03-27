@@ -15,7 +15,9 @@ function GetInTouchSection() {
                 width={60}
                 className="inline-block mr-5"
               />
-              <span className="text-white text-3xl">0113 397 1441</span>
+              <span className="text-white text-lg md:text-3xl">
+                0113 397 1441
+              </span>
             </div>
             <div className="mb-5">
               <Image
@@ -24,7 +26,7 @@ function GetInTouchSection() {
                 width={60}
                 className="inline-block mr-5"
               />
-              <span className="text-white text-3xl">
+              <span className="text-white text-lg md:text-3xl inline-block">
                 info@accelerateteaching.co.uk
               </span>
             </div>
