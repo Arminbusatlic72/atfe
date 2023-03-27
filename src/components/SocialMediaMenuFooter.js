@@ -13,7 +13,13 @@ function SocialMediaMenu() {
       {socialMedia.map((socialMedia, i) => (
         <li key={i} className="flex item-center px-4 content-center">
           <Link href={socialMedia.url}>
-            <Image src={socialMedia.icon} width={40} height={40} />
+            <Image
+              src={socialMedia.icon}
+              width={40}
+              height={40}
+              alt="social-media-icon"
+              className="h-auto w-auto"
+            />
           </Link>
         </li>
       ))}

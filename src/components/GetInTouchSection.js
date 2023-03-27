@@ -14,6 +14,7 @@ function GetInTouchSection() {
                 height={60}
                 width={60}
                 className="inline-block mr-5"
+                alt="icon 1"
               />
               <span className="text-white text-lg md:text-3xl">
                 0113 397 1441
@@ -25,6 +26,7 @@ function GetInTouchSection() {
                 height={60}
                 width={60}
                 className="inline-block mr-5"
+                alt="icon-1"
               />
               <span className="text-white text-lg md:text-3xl inline-block">
                 info@accelerateteaching.co.uk
@@ -32,7 +34,12 @@ function GetInTouchSection() {
             </div>
           </div>
           <div className="w-full md:w-2/5 md:pl-4">
-            <Image src="/video-placeholder.jpg" height={500} width={400} />
+            <Image
+              src="/video-placeholder.jpg"
+              height={500}
+              width={400}
+              alt="video"
+            />
           </div>
         </div>
       </div>

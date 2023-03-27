@@ -10,6 +10,7 @@ function JobDetailsCard() {
               src="/icon-location.svg"
               width={40}
               height={40}
+              alt="icon-location"
               className="card__icon"
             />
             <div>Huddersfield, Yorkshire.</div>
@@ -19,6 +20,7 @@ function JobDetailsCard() {
               src="/icon-piggy.svg"
               width={40}
               height={40}
+              alt="icon-piggy"
               className="card__icon"
             />
             <div>£75 - £90</div>
@@ -28,6 +30,7 @@ function JobDetailsCard() {
               src="/icon-piggy.svg"
               width={40}
               height={40}
+              alt="icon-piggy"
               className="card__icon"
             />
             <div>Temporary</div>
@@ -37,6 +40,7 @@ function JobDetailsCard() {
               src="/icon-house.svg"
               width={40}
               height={40}
+              alt="icon-house"
               className="card__icon"
             />
             <div>Primary</div>

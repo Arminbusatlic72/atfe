@@ -10,6 +10,7 @@ function AboutTeachingJobs() {
               width={500}
               height={500}
               className="relative -bottom-11"
+              alt="at"
             />
           </div>
           <div className="p-4 flex flex-col justify-center teaching-jobs-section__about-right">
@@ -18,8 +19,8 @@ function AboutTeachingJobs() {
               career in teaching?
             </h3>
             <p className="font-headings pb-8 font-light text-lg lg:text-2xl">
-              <span class="font-bold">Look no further!</span> We're here to help
-              you navigate the challenging job market and find the perfect
+              <span className="font-bold">Look no further!</span> We're here to
+              help you navigate the challenging job market and find the perfect
               teaching job that suits your qualifications and interests.
             </p>
             <p className="font-headings font-light text-lg lg:text-2xl pb-8">

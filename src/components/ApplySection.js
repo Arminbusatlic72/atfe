@@ -5,7 +5,7 @@ import Image from "next/image";
 function ApplySection() {
   return (
     <section className="apply-section">
-      <Image src="/ATJobsHero.jpg" width={1600} height={500} />
+      <Image src="/ATJobsHero.jpg" width={1600} height={500} alt="jobs-hero" />
       <div className="container mx-auto px-4 pt-8 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="md:col-span-1 bg-gray-100 p-4">

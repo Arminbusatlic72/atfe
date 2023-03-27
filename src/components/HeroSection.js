@@ -1,6 +1,6 @@
 import React from "react";
 
-function Hero({ backgroundImage, headingTextHighlighted, headingText }) {
+function HeroSection({ backgroundImage, headingTextHighlighted, headingText }) {
   return (
     <div className="relative">
       <img
@@ -21,4 +21,4 @@ function Hero({ backgroundImage, headingTextHighlighted, headingText }) {
   );
 }
 
-export default Hero;
+export default HeroSection;

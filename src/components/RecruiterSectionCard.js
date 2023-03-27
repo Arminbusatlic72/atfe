@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-function Card({ recruiter }) {
+function RecruiterSectionCard({ recruiter }) {
   return (
     <div className="bg-white border border-gray-200 rounded-3xl shadow dark:bg-gray-800 dark:border-gray-700 recruiter-card">
       <a href="#">
@@ -10,6 +10,10 @@ function Card({ recruiter }) {
           alt="recruiter"
           height={80}
           width={80}
+          style={{
+            width: 80,
+            height: 80
+          }}
         />
       </a>
       <div className="p-5 mt-10">
@@ -24,4 +28,4 @@ function Card({ recruiter }) {
     </div>
   );
 }
-export default Card;
+export default RecruiterSectionCard;

@@ -52,10 +52,28 @@ const MeetOurTeamSlider = ({ slides }) => {
   return (
     <div className="slider">
       <div className="slider__arrow--prev" onClick={goToPrevious}>
-        <Image src="/icon-arrow-next.svg" width={30} height={30} />
+        <Image
+          src="/icon-arrow-next.svg"
+          width={30}
+          height={30}
+          alt="icon-arrow"
+          style={{
+            width: 30,
+            height: 30
+          }}
+        />
       </div>
       <div className="slider__arrow--next" onClick={goToNext}>
-        <Image src="/icon-arrow-prev.svg" width={30} height={30} />
+        <Image
+          src="/icon-arrow-prev.svg"
+          width={30}
+          height={30}
+          alt="icon-arrow"
+          style={{
+            width: 30,
+            height: 30
+          }}
+        />
       </div>
 
       {visibleSlides.map((slide) => (
@@ -67,6 +85,7 @@ const MeetOurTeamSlider = ({ slides }) => {
             src={slide.img.startsWith("/") ? slide.img : `/${slide.img}`}
             width={500}
             height={500}
+            alt="profile-image"
             className="rounded-full mb-5"
           />
 
@@ -74,16 +93,25 @@ const MeetOurTeamSlider = ({ slides }) => {
             href="{slide.linkedin}"
             className="meet-our-team-slider-card__link"
           >
-            <Image src="/ATmeetOurTeamLinkedin.png" width={100} height={100} />
+            <Image
+              src="/ATmeetOurTeamLinkedin.png"
+              width={100}
+              height={100}
+              alt="linkedin"
+              style={{
+                width: 100,
+                height: 100
+              }}
+            />
           </a>
 
           <div className="text-center meet-our-team-slider-card__title-holder">
             <h5 className="text-orange headings text-bold text-3xl meet-our-team-slider-card__name">
               {slide.name}
             </h5>
-            <h7 className="text-white text-bold headings text-2xl meet-our-team-slider-card__position">
+            <h6 className="text-white text-bold headings text-2xl meet-our-team-slider-card__position">
               {slide.position}
-            </h7>
+            </h6>
           </div>
           <a
             href="`mailto:${slide.email}`"
