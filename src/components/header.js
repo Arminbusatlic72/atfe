@@ -1,4 +1,4 @@
-import Navbar from "./navbar";
+import Navbar from "./Navbar";
 function Header() {
   return (
     <header className="sticky z-20 top-0">
