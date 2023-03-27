@@ -20,7 +20,16 @@ function ReferSection() {
             <Button label={"Start Refering"} url={"/"} color={"tertiary"} />
           </div>
           <div className="w-full md:w-1/2">
-            <Image src="/ATrefer-friend.png" width={500} height={500} />
+            <Image
+              src="/ATrefer-friend.png"
+              width={500}
+              height={500}
+              style={{
+                width: 500,
+                height: 500
+              }}
+              alt="refer-friend"
+            />
           </div>
         </div>
       </div>

@@ -52,10 +52,22 @@ const Slider = ({ slides }) => {
   return (
     <div className="slider">
       <div className="slider__arrow--prev" onClick={goToPrevious}>
-        <Image src="/icon-arrow-next.svg" width={30} height={30} />
+        <Image
+          src="/icon-arrow-next.svg"
+          width={30}
+          height={30}
+          alt="arrow"
+          className="h-auto w-auto"
+        />
       </div>
       <div className="slider__arrow--next" onClick={goToNext}>
-        <Image src="/icon-arrow-prev.svg" width={30} height={30} />
+        <Image
+          src="/icon-arrow-prev.svg"
+          width={30}
+          height={30}
+          alt="arrow"
+          className="h-auto w-auto"
+        />
       </div>
 
       {visibleSlides.map((slide) => (
@@ -74,7 +86,8 @@ const Slider = ({ slides }) => {
                 src="/icon-location.svg"
                 width={40}
                 height={40}
-                className="card__icon"
+                className="h-auto w-auto card__icon"
+                alt="icon-location"
               />
               <div>
                 <span className="card__span">Location:</span>
@@ -86,7 +99,8 @@ const Slider = ({ slides }) => {
                 src="/icon-piggy.svg"
                 width={40}
                 height={40}
-                className="card__icon"
+                className="h-auto w-auto card__icon"
+                alt="icon-piggy"
               />
               <div>
                 <span className="card__span">Salary:</span>
@@ -98,7 +112,8 @@ const Slider = ({ slides }) => {
                 src="/icon-house.svg"
                 width={40}
                 height={40}
-                className="card__icon"
+                className="-auto w-auto card__icon"
+                alt="icon-piggy"
               />
               <div>
                 <span className="card__span">Setting:</span>

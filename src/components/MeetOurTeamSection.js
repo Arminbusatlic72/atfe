@@ -62,7 +62,7 @@ function MeetOurTeamSection() {
         Whilst our name is brand new, our team of education specialists boast 30
         years of experience within the industry.
       </p>
-      <div className="container">
+      <div className="slide-container">
         <MeetOurTeamSlider slides={slides} />
       </div>
     </section>

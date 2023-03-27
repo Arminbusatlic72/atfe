@@ -24,6 +24,7 @@ function PillarsSection() {
                 width={100}
                 height={100}
                 alt="Image 1"
+                className="h-auto w-auto"
               />
             </div>
             <div>
@@ -37,6 +38,7 @@ function PillarsSection() {
                 width={100}
                 height={100}
                 alt="Image 2"
+                className="h-auto w-auto"
               />
             </div>
             <div>
@@ -52,6 +54,7 @@ function PillarsSection() {
                 width={100}
                 height={100}
                 alt="Image 3"
+                className="h-auto w-auto"
               />
             </div>
             <div>

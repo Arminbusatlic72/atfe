@@ -1,4 +1,4 @@
-import Card from "./RecruiterSectionCard";
+import RecruiterSectionCard from "./RecruiterSectionCard";
 import Button from "./Button";
 function RecruiterSection() {
   const recruiters = [
@@ -34,7 +34,7 @@ function RecruiterSection() {
         </h3>
         <div className="flex mx-auto justify-between flex-wrap recruiter-section__card-holder">
           {recruiters.map((recruiter) => (
-            <Card key={recruiter.name} recruiter={recruiter} />
+            <RecruiterSectionCard key={recruiter.name} recruiter={recruiter} />
           ))}
         </div>
         <div className="container text-center pb-5">
